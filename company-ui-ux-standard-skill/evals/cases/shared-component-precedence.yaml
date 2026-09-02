@@ -1,0 +1,4 @@
+id: shared-component-precedence
+assertions:
+  - shared component is stronger evidence than page-local copy
+  - divergence is recorded

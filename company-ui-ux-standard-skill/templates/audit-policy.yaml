@@ -1,0 +1,6 @@
+version: 1
+thresholds:
+  normative_confidence: 0.85
+  observed_confidence: 0.60
+responsive_review:
+  fallback_viewports: [375, 768, 1024, 1440]

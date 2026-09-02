@@ -1,0 +1,12 @@
+version: 1
+priority:
+  - existing_company_component
+  - existing_company_pattern
+  - company_design_token
+  - approved_library_primitive
+  - new_custom_component
+requirements:
+  search_before_create: true
+  preserve_framework_conventions: true
+  run_accessibility_review: true
+  run_responsive_review: true

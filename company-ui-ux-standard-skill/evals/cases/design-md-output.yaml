@@ -1,0 +1,6 @@
+id: design-md-output
+assertions:
+  - YAML frontmatter exists
+  - exact tokens are machine-readable
+  - prose gives rationale
+  - unresolved values are not fabricated

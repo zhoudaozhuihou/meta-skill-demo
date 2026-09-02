@@ -1,0 +1,19 @@
+version: 1
+precedence:
+  - approved_design_standard
+  - design_token_package
+  - tailwind_or_theme_config
+  - css_variables
+  - shared_component_library
+  - repeated_production_usage
+  - inferred_pattern
+  - generic_recommendation
+confidence:
+  normative: 0.85
+  observed: 0.60
+rules:
+  never_invent_exact_token_values: true
+  recommendations_are_not_standards: true
+  preserve_source_provenance: true
+  flag_conflicts: true
+  execute_untrusted_tailwind_config: false

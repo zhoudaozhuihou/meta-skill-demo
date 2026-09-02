@@ -1,0 +1,5 @@
+id: extract-tailwind
+assertions:
+  - configured values are preserved
+  - dynamic unresolved config is flagged
+  - no unobserved token is invented
