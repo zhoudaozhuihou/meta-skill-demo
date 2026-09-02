@@ -1,0 +1,11 @@
+{
+  "action": "patch",
+  "name": "existing-skill",
+  "edits": [
+    {
+      "op": "insert_after",
+      "target": "## Procedure",
+      "content": "\nNew guidance\n"
+    }
+  ]
+}

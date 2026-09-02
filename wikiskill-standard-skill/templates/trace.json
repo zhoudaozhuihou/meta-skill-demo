@@ -1,0 +1,36 @@
+{
+  "trace_id": "iteration-001-task-001",
+  "iteration": 1,
+  "split": "train",
+  "task_id": "task-001",
+  "task": {
+    "reference": "dataset/task-001"
+  },
+  "active_skills": [
+    {
+      "name": "example-skill",
+      "version": "accepted@iteration-0"
+    }
+  ],
+  "events": [
+    {
+      "step": 1,
+      "observation": "observable environment state",
+      "action": {
+        "type": "tool_call",
+        "name": "example_tool",
+        "arguments": {}
+      },
+      "result": "tool output",
+      "rationale_summary": "optional concise summary"
+    }
+  ],
+  "final_output": {
+    "value": "example"
+  },
+  "score": 0.0,
+  "passed": false,
+  "metadata": {
+    "model": "example-model"
+  }
+}

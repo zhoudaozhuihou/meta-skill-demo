@@ -1,0 +1,15 @@
+{
+  "iteration": 1,
+  "best_score": 0.76,
+  "metric": "accuracy",
+  "accepted_skill_revision": "iteration-1",
+  "history": [
+    {
+      "iteration": 1,
+      "previous_best_score": 0.7,
+      "candidate_score": 0.76,
+      "candidate_revision": "iteration-1",
+      "decision": "Accepted"
+    }
+  ]
+}

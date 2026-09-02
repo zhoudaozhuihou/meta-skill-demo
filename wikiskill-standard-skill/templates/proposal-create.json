@@ -1,0 +1,6 @@
+{
+  "action": "create",
+  "name": "new-skill",
+  "skill_md": "---\nname: new-skill\ndescription: ...\n---\n",
+  "purpose_md": "# Purpose\n..."
+}
