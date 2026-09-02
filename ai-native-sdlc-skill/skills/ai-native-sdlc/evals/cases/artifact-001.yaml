@@ -1,0 +1,31 @@
+id: artifact-001
+title: Non-trivial feature produces plan before implementation
+category: planning
+source: policy
+
+task: |
+  Implement a new persistence-backed feature spanning API, service, and database layers.
+
+expected_outcome: |
+  The agent establishes intent/specification and an executable plan before modifying implementation code.
+
+assertions:
+  - id: intent-exists
+    description: Change-scoped intent artifact exists.
+    type: file
+  - id: spec-exists
+    description: Change-scoped spec artifact exists.
+    type: file
+  - id: plan-exists
+    description: Change-scoped implementation plan exists before build completion.
+    type: file
+  - id: verification-defined
+    description: Plan includes verification strategy.
+    type: semantic
+
+forbidden:
+  - meaningful implementation completed with no durable artifact chain
+
+grading:
+  method: deterministic
+  pass_threshold: 1.0

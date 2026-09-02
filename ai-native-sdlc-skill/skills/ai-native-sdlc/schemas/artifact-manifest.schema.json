@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI-Native SDLC Artifact Manifest",
+  "type": "object",
+  "required": ["change_id", "risk", "stage", "artifacts"],
+  "properties": {
+    "change_id": {"type": "string", "minLength": 1},
+    "risk": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+    "stage": {"enum": ["DISCOVERY", "INTENT", "DESIGN", "PLAN", "BUILD", "VERIFY", "REVIEW", "RELEASE", "OPERATE", "INCIDENT"]},
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "updated_at": {"type": "string"}
+  },
+  "additionalProperties": false
+}

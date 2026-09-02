@@ -1,0 +1,10 @@
+id: wikiskill-standard-skill-format
+task: Validate a skill proposed by WikiSkill.
+assertions:
+  - SKILL.md exists
+  - YAML frontmatter contains name
+  - YAML frontmatter contains description
+  - When to Apply is documented
+  - When NOT to Apply is documented
+  - PURPOSE.md exists
+  - PURPOSE.md references motivating patterns

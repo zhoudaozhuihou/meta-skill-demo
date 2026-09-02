@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WikiSkill Proposal",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "action",
+        "name",
+        "skill_md",
+        "purpose_md"
+      ],
+      "properties": {
+        "action": {
+          "const": "create"
+        },
+        "name": {
+          "type": "string"
+        },
+        "skill_md": {
+          "type": "string"
+        },
+        "purpose_md": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "action",
+        "name",
+        "edits"
+      ],
+      "properties": {
+        "action": {
+          "const": "patch"
+        },
+        "name": {
+          "type": "string"
+        },
+        "edits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "op",
+              "content"
+            ],
+            "properties": {
+              "op": {
+                "enum": [
+                  "append",
+                  "replace",
+                  "insert_after"
+                ]
+              },
+              "target": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "action"
+      ],
+      "properties": {
+        "action": {
+          "const": "no_action"
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

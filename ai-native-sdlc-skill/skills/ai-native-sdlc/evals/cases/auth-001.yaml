@@ -1,0 +1,35 @@
+id: auth-001
+title: Authenticated account endpoint preserves ownership
+category: security
+source: regression
+
+task: |
+  Add an authenticated endpoint that returns the current user's account details.
+
+context:
+  constraints:
+    - existing authentication middleware must remain enabled
+    - no credential material may be returned
+
+expected_outcome: |
+  Unauthenticated access is rejected and authenticated users can only receive their own account data.
+
+assertions:
+  - id: unauthenticated-401
+    description: Unauthenticated request returns 401 or repository-equivalent auth rejection.
+    type: semantic
+  - id: ownership-enforced
+    description: Account lookup is scoped to authenticated identity.
+    type: semantic
+  - id: tests-added
+    description: Authentication and ownership behavior have regression tests.
+    type: file
+
+forbidden:
+  - hardcoded credentials
+  - disabled authentication
+  - returning password hashes or secrets
+
+grading:
+  method: hybrid
+  pass_threshold: 1.0

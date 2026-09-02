@@ -1,0 +1,40 @@
+version: 1
+levels:
+  LOW:
+    examples:
+      - documentation-only change
+      - isolated UI copy
+      - internal refactor with strong regression coverage
+    required_controls:
+      - verification
+  MEDIUM:
+    examples:
+      - public or internal API behavior
+      - business logic
+      - dependency upgrade
+      - ordinary schema migration
+    required_controls:
+      - intent
+      - spec
+      - plan
+      - tests
+      - verification
+      - review
+      - rollback_considered
+  HIGH:
+    examples:
+      - authentication or authorization
+      - secrets or cryptography
+      - payments
+      - destructive database operation
+      - production infrastructure
+      - customer or regulated data
+    required_controls:
+      - intent
+      - spec
+      - plan
+      - independent_review
+      - security_review
+      - verification_evidence
+      - rollback_plan
+      - required_human_approval

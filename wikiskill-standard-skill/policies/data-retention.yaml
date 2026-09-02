@@ -1,0 +1,15 @@
+version: 1
+
+raw:
+  immutable: true
+  redact_secrets: true
+  allow_hidden_chain_of_thought: false
+  minimize_pii: true
+
+wiki:
+  persistent_across_iterations: true
+  evidence_links_required: true
+
+skills:
+  reversible: true
+  provenance_file: PURPOSE.md

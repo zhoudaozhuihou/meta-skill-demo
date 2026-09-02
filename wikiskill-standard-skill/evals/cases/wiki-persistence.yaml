@@ -1,0 +1,7 @@
+id: wikiskill-wiki-persistence
+task: Preserve accumulated Wiki patterns after a candidate skill rollback.
+assertions:
+  - raw traces are unchanged
+  - wiki pattern updates remain
+  - active skills roll back
+  - rejected proposal is auditable

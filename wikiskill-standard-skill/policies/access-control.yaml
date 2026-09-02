@@ -1,0 +1,21 @@
+version: 1
+
+inference_agent:
+  raw: none
+  wiki: none
+  skills: read
+
+wiki_maintainer:
+  raw: sampled_read
+  wiki: read_write
+  skills: metadata_read
+
+skill_proposer:
+  raw: selected_read
+  wiki: read
+  skills: read
+
+gating_harness:
+  raw: validation_write
+  wiki: impact_append
+  skills: candidate_write_and_promote

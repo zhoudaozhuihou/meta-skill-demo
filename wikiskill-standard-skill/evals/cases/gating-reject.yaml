@@ -1,0 +1,10 @@
+id: wikiskill-gating-reject
+task: Reject a candidate whose validation score does not exceed the current best.
+fixture:
+  best_score: 0.78
+  candidate_score: 0.76
+assertions:
+  - decision == Rejected
+  - accepted skills remain unchanged
+  - wiki remains preserved
+  - skill-impact receives a rejection record

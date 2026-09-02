@@ -1,0 +1,19 @@
+version: 1
+principles:
+  - least_privilege
+  - deny_by_default_for_destructive_actions
+  - separate_read_from_write
+  - production_credentials_not_exposed_to_general_agent
+example:
+  allow:
+    - repository_read
+    - test_execution
+    - build_execution
+  require_approval:
+    - dependency_install_from_unapproved_source
+    - database_write_against_shared_environment
+    - production_deploy
+  deny:
+    - secret_store_dump
+    - direct_push_to_protected_branch
+    - disabling_security_scans

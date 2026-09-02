@@ -1,0 +1,14 @@
+version: 1
+production:
+  agent_may_prepare_release: true
+  agent_may_self_approve: false
+  required:
+    - verification_passed
+    - required_review_complete
+    - rollback_defined
+    - monitoring_defined
+    - external_approval
+  deny_if:
+    - unresolved_blocker
+    - unresolved_required_security_finding
+    - missing_external_approval

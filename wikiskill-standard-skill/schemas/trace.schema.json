@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WikiSkill Trace",
+  "type": "object",
+  "required": [
+    "trace_id",
+    "iteration",
+    "split",
+    "task_id",
+    "events",
+    "score",
+    "passed"
+  ],
+  "properties": {
+    "trace_id": {
+      "type": "string"
+    },
+    "iteration": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "test",
+        "production"
+      ]
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "task": {
+      "type": "object"
+    },
+    "active_skills": {
+      "type": "array"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "final_output": {},
+    "score": {
+      "type": "number"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

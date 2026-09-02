@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Eval Case",
+  "type": "object",
+  "required": ["id", "title", "category", "task", "expected_outcome", "assertions", "grading"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "category": {"type": "string"},
+    "source": {"type": "string"},
+    "task": {"type": "string"},
+    "context": {"type": "object"},
+    "expected_outcome": {"type": "string"},
+    "assertions": {"type": "array", "items": {"type": "object"}},
+    "forbidden": {"type": "array", "items": {"type": "string"}},
+    "grading": {"type": "object"}
+  }
+}

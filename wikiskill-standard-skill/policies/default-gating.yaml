@@ -1,0 +1,19 @@
+version: 1
+
+acceptance:
+  mode: strict_improvement
+  expression: candidate_score > best_score
+
+rollback:
+  skills: true
+  wiki: false
+  raw: false
+
+validation:
+  require_independent_split: true
+  prohibit_test_set_optimization: true
+
+production_extensions:
+  require_no_critical_regression: true
+  require_policy_compliance: true
+  human_approval: configurable

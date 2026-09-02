@@ -1,0 +1,17 @@
+version: 1
+severities:
+  BLOCKER: must be resolved before merge/release
+  HIGH: material correctness/security/reliability risk
+  MEDIUM: meaningful defect or maintainability risk
+  LOW: minor issue with limited impact
+  NIT: optional polish
+required_fields:
+  - location
+  - problem
+  - impact
+  - evidence
+  - recommended_fix
+rules:
+  - review_against_intent_spec_plan
+  - do_not_invent_findings
+  - automated_review_is_not_human_approval

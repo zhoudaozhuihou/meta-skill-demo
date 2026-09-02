@@ -1,0 +1,10 @@
+id: wikiskill-gating-accept
+task: Accept a candidate whose validation score strictly improves the best score.
+fixture:
+  best_score: 0.78
+  candidate_score: 0.81
+assertions:
+  - decision == Accepted
+  - best_score == 0.81
+  - candidate becomes active
+  - skill-impact receives an acceptance record

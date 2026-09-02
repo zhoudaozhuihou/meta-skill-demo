@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WikiSkill Evolution State",
+  "type": "object",
+  "required": [
+    "iteration",
+    "best_score",
+    "metric",
+    "accepted_skill_revision"
+  ],
+  "properties": {
+    "iteration": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "best_score": {
+      "type": "number"
+    },
+    "metric": {
+      "type": "string"
+    },
+    "accepted_skill_revision": {
+      "type": "string"
+    },
+    "history": {
+      "type": "array"
+    }
+  }
+}

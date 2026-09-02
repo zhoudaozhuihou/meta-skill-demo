@@ -1,0 +1,26 @@
+id: <eval-id>
+title: <short-title>
+category: <planning|implementation|security|review|incident>
+source: <incident|regression|policy|real-task>
+
+task: |
+  Describe the task presented to the agent.
+
+context:
+  files: []
+  constraints: []
+
+expected_outcome: |
+  Describe the observable successful outcome.
+
+assertions:
+  - id: assertion-1
+    description: <observable assertion>
+    type: <file|command|semantic|policy>
+
+forbidden:
+  - <behavior that must not occur>
+
+grading:
+  method: <deterministic|llm-assisted|hybrid>
+  pass_threshold: 1.0
